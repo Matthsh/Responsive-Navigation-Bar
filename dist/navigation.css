@@ -50,7 +50,7 @@ input {
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #1fc0e9;
   height: 80px;
   padding: 1.5rem;
@@ -90,7 +90,7 @@ input {
 .header-center > ul li {
   position: relative;
 }
-.header-center > ul li a {
+.header-center > ul li > a {
   display: flex;
   align-items: center;
   color: black;
@@ -184,4 +184,78 @@ input {
 }
 .header .drop-menu .drop-menu .drop-menu {
   left: calc(200px - 1.5rem);
+}
+
+/**main {
+    background: url("../0ebd4f8aa336fd1b2764d8926655d21c.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }*/
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5rem;
+  }
+  .header-start .Logo {
+    font-size: 1.2rem;
+  }
+  .header-start .mobile-btn {
+    display: flex;
+  }
+  .header-center {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.355);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3;
+  }
+  .header-center ul {
+    align-items: stretch !important;
+  }
+  .header-center > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: auto;
+    position: fixed;
+    inset: 0;
+    right: auto;
+    transform: translate(-100%);
+    opacity: 0;
+    background: linear-gradient(90deg, #1fc0e9, transparent);
+    width: 300px;
+    padding: 1rem;
+    padding-top: 120px;
+    transition: all 0.3s ease;
+  }
+  .header-center .drop-menu {
+    display: none;
+    position: static;
+    width: auto;
+    padding-top: 0;
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+  .header-center .drop-menu ul > li > a {
+    padding-left: 2.5rem;
+  }
+  .header-center .drop-menu.show {
+    display: block;
+  }
+  .header-end a.link-fill {
+    padding: 1rem;
+  }
+  .menu-toggle .header-start {
+    position: relative;
+    z-index: 9;
+  }
+  .menu-toggle .header-center {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .menu-toggle .header-center ul {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

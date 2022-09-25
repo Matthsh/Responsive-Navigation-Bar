@@ -8,7 +8,7 @@
 
     display: flex;
     align-items:center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: $secondary-color;
     height: $header-height;
     padding: 1.5rem;
@@ -24,7 +24,7 @@
         gap: .8rem;
 
         .logo {
-            font-size: 1.5rem;;
+            font-size: 1.5rem;
             color: black;
         }
 
@@ -55,7 +55,7 @@
             & li {
                 position: relative;
 
-                a {
+                & > a {
                     display: flex;
                     align-items: center;
                     color: black;
@@ -172,5 +172,11 @@
         }
     }
 }
+
+/**main {
+    background: url("../0ebd4f8aa336fd1b2764d8926655d21c.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }*/
 
 @import "responsive";
